@@ -1,0 +1,22 @@
+{
+  "add-to-cart-button": {
+    "props": {
+      "addToCartFeedback": "customEvent",
+      "customPixelEventId": "add-to-cart-button"
+    }
+  },
+
+  "minicart.v2": {
+    "props": {
+      "customPixelEventId": "add-to-cart-button",
+      "MinicartIcon": "image#minicart-icon"
+    },
+    "children": ["minicart-base-content"]
+  },
+
+  "image#minicart-icon": {
+    "props": {
+      "src": "assets/img/cart-icon.png"
+    }
+  }
+}

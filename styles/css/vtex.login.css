@@ -1,0 +1,10 @@
+.label {
+	background-image: url("assets/img/user-icon.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	padding: 0;
+	height: 26px;
+	width: 26px;
+	margin-top: 0;
+}

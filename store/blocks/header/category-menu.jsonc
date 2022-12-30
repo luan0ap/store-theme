@@ -1,0 +1,91 @@
+{
+  "category-menu": {
+    "props": {
+      "showAllDepartments": true,
+      "showSubcategories": true,
+      "menuDisposition": "center",
+      "departments": [],
+      "sortSubcategories": "name"
+    }
+  }
+}
+
+// {
+//   "vtex.menu@2.x:menu#category-menu": {
+//     "children": [
+//       "menu-item#departments",
+//       "menu-item#department02"
+//     ]
+//   },
+
+//   // Departments menus
+//   "menu-item#departments": {
+//     "props": {
+//       "id": "menu-item-shop",
+//       "type": "custom",
+//       "highlight": false,
+//       "itemProps": {
+//         "type": "internal",
+//         "href": "#",
+//         "noFollow": false,
+//         "tagTitle": "Shop",
+//         "text": "Shop"
+//       },
+//       "iconProps": {
+//         "id": "bnd-logo",
+//         "size": 16,
+//         "viewBox": "0 0 16 16"
+//       },
+//       "iconToTheRight": true
+//     }
+//   },
+
+//   // Department menus 2
+//   "menu-item#department02": {
+//     "props": {
+//       "id": "menu-item-department02",
+//       "type": "custom",
+//       "highlight": false,
+//       "itemProps": {
+//         "type": "internal",
+//         "href": "#",
+//         "noFollow": false,
+//         "tagTitle": "Shop",
+//         "text": "DEPARTAMENTO 1"
+//       }
+//     },
+//     "blocks": [
+//       "vtex.menu@2.x:submenu#department02"
+//     ]
+//   },
+//   "vtex.menu@2.x:submenu#department02": {
+//     "props": {
+//       "width": 500
+//     },
+//     "children": [
+//       "vtex.menu@2.x:menu#department02-submenu"
+//     ]
+//   },
+//   "vtex.menu@2.x:menu#department02-submenu": {
+//     "props": {
+//       "orientation": "vertical"
+//     },
+//     "children": [
+//       "menu-item#category01"
+//     ]
+//   },
+//   "menu-item#category01": {
+//     "props": {
+//       "id": "menu-item-category01",
+//       "type": "custom",
+//       "highlight": false,
+//       "itemProps": {
+//         "type": "internal",
+//         "href": "#",
+//         "noFollow": false,
+//         "tagTitle": "Categoria 1",
+//         "text": "Categoria 1"
+//       }
+//     }
+//   }
+// }

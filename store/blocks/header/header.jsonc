@@ -1,0 +1,214 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  // Flex utils
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+
+  // Desktop only
+  "header-layout.desktop": {
+    "children": [
+      "sticky-layout#header"
+    ]
+  },
+  "sticky-layout#header": {
+    "props": {
+      "blockClass": ["sticky-header", "main-header"]
+    },
+
+    "children": [
+      "flex-layout.row#tip-bar",
+      "flex-layout.row#navbar-desktop",
+      "flex-layout.row#menubar-desktop"
+    ]
+  },
+
+  // Mobile only
+  "header-layout.mobile": {
+    "children": ["sticky-layout#mobile"]
+  },
+  "sticky-layout#mobile": {
+    "props": {
+      "blockClass": ["sticky-header", "main-header"]
+    },
+    "children": [
+      "flex-layout.row#tip-bar",
+      "flex-layout.row#navbar-mobile"
+    ]
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+  "menu#drawer": {
+    "children": [],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  // Tipbar
+  "flex-layout.row#tip-bar": {
+    "props": {
+      "blockClass": "tip-bar",
+      "fullWidth": true,
+      "colSizing": "auto",
+      "paddingTop": 3,
+      "paddingBottom": 3
+    },
+    "children": [
+      "flex-layout.row#tip-bar-text",
+      "flex-layout.col#spacer",
+      "flex-layout.row#tip-bar-links"
+    ]
+  },
+  "flex-layout.row#tip-bar-text": {
+    "children": [
+      "rich-text#tip-bar"
+    ]
+  },
+  "rich-text#tip-bar": {
+    "props": {
+      "textAlignment": "CENTER",
+      "blockClass": "tip-bar__text",
+      "text": "Frete Gratis acima de R$299,00 para Região Sudeste"
+    }
+  },
+  "flex-layout.row#tip-bar-links": {
+    "props": {
+      "blockClass": "tip-bar__links",
+      "colSizing": "auto",
+      "colGap": 5
+    },
+    "children": [
+      "link#be-a-reseller",
+      "rich-text#separator",
+      "link#be-an-agent"
+    ]
+  },
+  "link#be-a-reseller": {
+    "props": {
+      "label": "SEJA UM REVENDEDOR",
+      "href": "#",
+      "blockClass": ["tip-bar-link", "be-a-reseller"]
+    }
+  },
+  "link#be-an-agent": {
+    "props": {
+      "label": "SEJA UM REPRESENTANTE",
+      "href": "#",
+      "blockClass": ["tip-bar-link", "be-a-agent"]
+    }
+  },
+  "rich-text#separator": {
+    "props": {
+      "blockClass": "tip-bar__link-separator",
+      "text": "|"
+    }
+  },
+
+  // Navbar
+  "flex-layout.row#navbar-desktop": {
+    "props": {
+      "blockClass": "navbar",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "colGap": {
+        "mobile": 0,
+        "desktop": 10
+      }
+    },
+    "children": [
+      "logo",
+      "flex-layout.col#search",
+      "flex-layout.row#actions"
+    ]
+  },
+  "flex-layout.row#navbar-mobile": {
+    "props": {
+      "blockClass": "navbar",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#menu",
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.row#menu": {
+    "props": {
+      "blockClass": "navbar-menu",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "colGap": 0
+    },
+    "children": [
+      "drawer",
+      "logo",
+      "minicart.v2"
+    ]
+  },
+  "logo": {
+    "props": {
+      "blockClass": "avanti-logo",
+      "title": "Avanti logo",
+      "href": "/",
+      "url": "assets/img/avanti-logo.png",
+      "width": "180",
+      "height": "auto"
+    }
+  },
+  "flex-layout.col#search": {
+    "props": {
+      "width": "grow",
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "search-bar#header-search"
+    ]
+  },
+  "search-bar#header-search": {
+    "props": {
+      "placeholder": "O que você procura?" 
+    }
+  },
+  "flex-layout.row#actions": {
+    "props": {
+      "colGap": 0,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "login",
+      "minicart.v2"
+    ]
+  },
+  "login": {
+    "props": {
+      "iconLabel": " "
+    }
+  },
+
+  // Menubar
+  "flex-layout.row#menubar-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "fullWidth": true
+    },
+    "children": [
+      "category-menu"
+    ]
+  }
+}
